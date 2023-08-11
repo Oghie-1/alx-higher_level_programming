@@ -11,4 +11,5 @@ def fizzbuzz():
         else:
             print(f"{number} ", end="")
 
+
 fizzbuzz()
