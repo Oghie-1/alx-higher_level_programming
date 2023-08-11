@@ -2,7 +2,7 @@
 
 def print_numbers():
     for number in range(99):
-        print(f"{number} = {number:x}")
+        print("{0} = {0:x}".format(number))
 
 print_numbers()
 
