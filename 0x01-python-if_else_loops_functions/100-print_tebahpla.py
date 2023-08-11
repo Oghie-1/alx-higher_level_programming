@@ -4,4 +4,5 @@ def reversealpha():
     for char in range(ord('z'), ord('a') - 1, -1):
         print("{}".format(chr(char).upper() if (ord('z') - char) % 2 == 0 else chr(char)), end="")
 
+
 reversealpha()
