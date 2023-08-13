@@ -14,5 +14,6 @@ module_spec.loader.exec_module(module)
 
 # Enumerate and print the attributes
 for attr_name in dir(module):
-    if not attr_name.startswith("__"):  # Exclude special attributes
+    if not attr_name.startswith("__") and 
+        attr_name not in ["__main__", "__name__"]:  # Exclude special attributes
         print(attr_name)

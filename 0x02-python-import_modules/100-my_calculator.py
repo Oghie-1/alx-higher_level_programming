@@ -2,9 +2,11 @@
 import sys
 from calculator_1 import add, div, sub, mul
 
+
 def print_usage_and_exit():
     print("Usage: ./100-my_calculator.py <a> <operator> <b>")
     sys.exit(1)
+
 
 def main():
     if len(sys.argv) != 4:
