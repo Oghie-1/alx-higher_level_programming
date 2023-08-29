@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-#function that prints an integer with "{:d}".format().
+##function that prints an integer with "{:d}".format().
 
 def safe_print_integer(value):
     try:
@@ -8,4 +8,3 @@ def safe_print_integer(value):
         return True
     except (ValueError, TypeError):
         return False
-
