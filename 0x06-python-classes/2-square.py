@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-""" Define class Square. with exceptions if size not int"""
+"""Define class Square. with exceptions if size not int"""
 
 
 class Square:
