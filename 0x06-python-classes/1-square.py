@@ -4,9 +4,10 @@
 
 
 class Square:
-    size = 20
+    """represent a square"""
 
     def __init__(self, size=None):
-        if self.size is not None:
-            self.size = size
+        """Initialize new square"""
+        if self.__size is not None:
+            self.__size = size
         
