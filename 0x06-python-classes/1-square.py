@@ -6,8 +6,7 @@
 class Square:
     """represent a square"""
 
-    def __init__(self, size=None):
-        """Initialize new square"""
-        if self.__size is not None:
-            self.__size = size
+    def __init__(self, size):
+        """Initialize square"""
+        self.__size = size
         
