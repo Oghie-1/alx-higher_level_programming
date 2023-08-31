@@ -5,11 +5,11 @@
 
 
 class Square:
+     """represent a square."""
 
 
-    def __init__(self, size=0):
-        """initialize new Square.
-
+     def __init__(self, size=0):
+        """Initialize new Square.
             size (int): size of new square.
         """
         if not isinstance(size, int):
