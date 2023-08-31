@@ -3,10 +3,10 @@
 
 
 class Square:
-
+    """square."""
 
     def __init__(self, size=0):
-        """Initialize Square.
+        """Initialize square.
             size (int): size of square.
         """
         if not isinstance(size, int):
