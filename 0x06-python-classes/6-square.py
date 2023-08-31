@@ -1,15 +1,17 @@
 #!/usr/bin/python3
-"""Define class Square."""
+"""Define a class Square."""
 
 
 class Square:
-    """square."""
+    """Represent a square."""
 
     def __init__(self, size=0, position=(0, 0)):
-         """Initialize a new square.
-            size (int): size of new square.
+        """Initialize a new square.
+
+        Args:
+            size (int): The size of the new square.
             position (int, int): The position of the new square.
-         """
+        """
         self.size = size
         self.position = position
 
@@ -32,7 +34,7 @@ class Square:
         return (self.__position)
 
     @position.setter
-     def position(self, value):
+    def position(self, value):
         if (not isinstance(value, tuple) or
                 len(value) != 2 or
                 not all(isinstance(num, int) for num in value) or
