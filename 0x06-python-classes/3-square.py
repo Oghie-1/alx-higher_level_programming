@@ -9,8 +9,6 @@ class Square:
         """Initialize Square.
             size (int): size of square.
         """
-        
-
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
 
