@@ -20,22 +20,25 @@ def matrix_divided(matrix, div):
     Returns:
         A new matrix which represents the result of the divisions
     """
+
+    """validate  matrix """
     if not isinstance(matrix, list) or not all(isinstance(row, list) for row in matrix):
         raise TypeError("matrix must be a list of lists")
 
     if not all(isinstance(val, (int, float)) for row in matrix for val in row):
         raise TypeError("matrix must contain only integers or floats")
 
+    row_lengths = [len(row) for row in matrix]
+    if len(set(row_lengths)) != 1:
+        raise TypeError("Each row of the matrix must have the same size")
+
+    """validate div"""
+
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
 
     if div == 0:
         raise ZeroDivisionError("division by zero")
-
-    row_length = len(matrix[0])
-
-    if any(len(row) != row_length for row in matrix):
-        raise TypeError("Each row of the matrix must have the same size")
 
     result = [[round(val / div, 2) for val in row] for row in matrix]
 
