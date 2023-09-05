@@ -32,14 +32,12 @@ class Rectangle:
             height: An integer representing object height.
                   Has a default value of 0.
         """
-
         self.__width = width
         self.__height = height
 
     def __str__(self):
         """Returns an informal and nicely printable string representation
-        of a Rectangle instance, filled with the '#' character.
-        """
+        of a Rectangle instance, filled with the '#' character."""
         if self.__height == 0 or self.__width == 0:
             return ""
         rec_str = ""
@@ -49,9 +47,18 @@ class Rectangle:
             rec_str += "\n"
         return rec_str[:-1]
 
+    def __repr__(self):
+        """Return a string representation of a Rectangle instance
+        that is able to recreate a new instance by using eval()
+        """
+        return "Rectangle({}, {})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """ Print a message for del
+        """
+        print("Bye rectangle...")
 
     @property
-
     def width(self):
         """Gets the width private attribute value.
 
@@ -61,7 +68,6 @@ class Rectangle:
         return self.__width
 
     @width.setter
-
     def width(self, value):
         """Sets the width private attribute value.
 
@@ -70,16 +76,13 @@ class Rectangle:
         Arg:
             value: the value to be set
         """
-
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-
         self.__width = value
 
     @property
-
     def height(self):
         """Gets the height private attribute value.
 
@@ -88,9 +91,7 @@ class Rectangle:
         """
         return self.__height
 
-
     @height.setter
-
     def height(self, value):
         """Sets the height private attribute value.
 
@@ -103,9 +104,7 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-
         self.__height = value
-
 
     def area(self):
         """A public object method.
@@ -113,8 +112,7 @@ class Rectangle:
         Returns:
             The current rectangle area
         """
-        return self.__height * self.__width
-
+        return self.__width * self.__height
 
     def perimeter(self):
         """A public object method.
@@ -122,8 +120,7 @@ class Rectangle:
         Returns:
             The current rectangle perimeter
         """
-
         if self.width == 0 or self.height == 0:
             return 0
         else:
-            return 2 * (self.__height + self.__width)
+            return 2 * (self.__width + self.__height)
