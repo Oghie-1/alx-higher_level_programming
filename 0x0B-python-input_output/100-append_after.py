@@ -4,6 +4,7 @@ Inserts a line of text to a file,
 after each line containing a specific string.
 """
 
+
 def append_after(filename="", search_string="", new_string=""):
     """Appends the new_string after
     the search_string in filename.
@@ -12,11 +13,8 @@ def append_after(filename="", search_string="", new_string=""):
         - search_string: string to append after
         - new_string: new_string to append
     """
-
-
     with open(filename, "r") as f:
         text = f.readlines()
-
 
     with open(filename, "w") as fo:
         s = ""
