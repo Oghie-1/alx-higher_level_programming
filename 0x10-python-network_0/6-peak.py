@@ -1,5 +1,9 @@
 #1/usr/bin/env python3
-
+"""
+An element in the list is said to be peak if
+it is NOT smaller than its neighbors.
+For corner elements, we need to consider only one neighbor.
+"""
 
 
 def find_peak(list_of_integers):
