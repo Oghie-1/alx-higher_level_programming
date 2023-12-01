@@ -1,4 +1,4 @@
-#1/usr/bin/env python3
+#!/usr/bin/python3
 """
 An element in the list is said to be peak if
 it is NOT smaller than its neighbors.
